@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog-post-Task</title>
+    <link rel="stylesheet" href="./Blog_post.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="blogs_header">You can add Blog Post</h1>
+
+      <!-- Form to add a new blog post -->
+      <form id="blogForm">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="content" placeholder="Content" required></textarea>
+        <input type="file" id="image" accept="image/*" />
+        <button type="submit" id="submitBtn">Add Post</button>
+      </form>
+
+      <!-- Display list of blog posts -->
+      <h2 class="your_blogs">Your blogs:</h2>
+      <div id="blogList"></div>
+    </div>
+
+    <!-- Modal for viewing full content and image -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="Blog Post Image" />
+        <div id="modalContent"></div>
+        <!-- Form for editing -->
+        <form id="editForm" style="display: none">
+          <input type="text" id="editTitle" placeholder="Edit Title" required />
+          <textarea
+            id="editContent"
+            placeholder="Edit Content"
+            required
+          ></textarea>
+          <input type="file" id="editImage" accept="image/*" />
+          <button type="button" id="saveEditBtn">Save Edit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./Blog_post.js"></script>
+  </body>
+</html>
